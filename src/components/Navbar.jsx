@@ -1,22 +1,21 @@
 import Icon from "../assets/icons/IconsGalery";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-    const strokeWidth = 1.7;
-
     return (
         <nav className="Navbar">
-            <button className="NavbarIcon">
+            <Link to="/" className="NavbarIcon">
                 <Icon name="calculator" />
-            </button>
-            <button className="NavbarIcon">
+            </Link>
+            <Link to="/history" className="NavbarIcon">
                 <Icon name="hourglass" />
-            </button>
-            <button className="NavbarIcon">
+            </Link>
+            <Link to="/vechicles" className="NavbarIcon">
                 <Icon name="car" />
-            </button>
-            <button className="NavbarIcon">
+            </Link>
+            <Link to="/settings" className="NavbarIcon">
                 <Icon name="gear" />
-            </button>
+            </Link>
         </nav>
     )
 }
