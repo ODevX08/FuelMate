@@ -1,0 +1,61 @@
+:root {
+  /* Base colors */
+  --teal: 187 100%;
+  --gold: 47 98%;
+
+  /* Core */
+  --teal-prim: hsl(var(--teal) 20% / 100%);
+  --gold-prim: hsl(var(--gold) 55% / 100%);
+
+  /* Shades */
+  --teal-dark: hsl(var(--teal) 10% / 100%);
+  --gold-dark: hsl(var(--gold) 42% / 100%);
+  --teal-black: hsl(var(--teal) 8% / 100%);
+  --gold-black: hsl(var(--gold) 8% / 100%);
+
+  --teal-light: hsl(var(--teal) 30% / 100%);
+  --gold-light: hsl(var(--gold) 65% / 100%);
+  --teal-white: hsl(var(--teal) 97% / 100%);
+  --gold-white: hsl(var(--gold) 92% / 100%);
+
+  /* Alpha */
+  --teal-85: hsl(var(--teal) 10% / 85%);
+  --teal-60: hsl(var(--teal) 10% / 60%);
+  --teal-40: hsl(var(--teal) 10% / 40%);
+  --teal-20: hsl(var(--teal) 10% / 20%);
+
+  --gold-85: hsl(var(--gold) 55% / 85%);
+  --gold-60: hsl(var(--gold) 55% / 60%);
+  --gold-40: hsl(var(--gold) 55% / 40%);
+  --gold-20: hsl(var(--gold) 55% / 20%);
+}
+
+body {
+  margin: 0;
+  height: 5000px;
+}
+
+.Navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--teal-prim);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.4rem;
+  padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+}
+
+.NavbarIcon {
+  background-color: var(--teal-20);
+  color: var(--teal-white);
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.5rem;
+}
