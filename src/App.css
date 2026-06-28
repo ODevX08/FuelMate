@@ -98,7 +98,8 @@ body {
 }
 
 .HomeMain {
-  width: 100dvw;
+  left: 0;
+  right: 0;
   height: 100dvh;
   background-color: var(--teal-white);
 }
@@ -109,7 +110,7 @@ body {
   align-items: center;
   gap: 0.6rem;
   padding: 2rem 0;
-  width: 100dvw;
+  width: 100%;
   height: max-content;
 }
 
