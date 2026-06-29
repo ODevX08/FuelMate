@@ -1,3 +1,4 @@
+import MethodSelector from "./MethodSelector";
 import NumericInput from "./NumericInput";
 
 function CalculatorFuelConsumption({
@@ -5,13 +6,23 @@ function CalculatorFuelConsumption({
     setFuelConsumptionMethod,
     fuelConsumption,
     setFuelConsumption,
+    vehicle,
+    setVehicle
 }) {
     return (
         <section>
-            <input type="radio" name="fuelConsumptionMethod" id="fuelManual" onChange={() => {setFuelConsumptionMethod("manual"); setFuelConsumption("")}} checked={fuelConsumptionMethod === "manual"} />
-            <label htmlFor="fuelManual">Ręcznie</label>
-            <input type="radio" name="fuelConsumptionMethod" id="vehicle" onChange={() => {setFuelConsumptionMethod("vehicle"); setFuelConsumption("")}} checked={fuelConsumptionMethod === "vehicle"} />
-            <label htmlFor="vehicle">Z zapisanych pojazdów</label><br />
+            <MethodSelector 
+                name={"fuelConsumption"}
+                value1={"manual"}
+                value2={"vehicle"}
+                label1={"Ręcznie"}
+                label2={"Z zapisanych pojazdów"}
+                currentMethod={fuelConsumptionMethod}
+                onChangeMethod={(method) => {
+                    setFuelConsumptionMethod(method);
+                    setFuelConsumption("")
+                }}
+            />
 
             {fuelConsumptionMethod === "manual" ? (
                 <>

@@ -1,3 +1,4 @@
+import MethodSelector from "./MethodSelector";
 import NumericInput from "./NumericInput";
 
 function CalculatorDistance({
@@ -12,10 +13,18 @@ function CalculatorDistance({
 }) {
     return (
         <section>
-            <input type="radio" name="distanceMethod" id="distanceManual" onChange={() => {setDistanceMethod("manual"); setDistance("")}} checked={distanceMethod === "manual"} />
-            <label htmlFor="distanceManual">Ręcznie</label>
-            <input type="radio" name="distanceMethod" id="map" onChange={() => {setDistanceMethod("map"); setDistance("")}} checked={distanceMethod === "map"} />
-            <label htmlFor="map">Mapy</label><br />
+            <MethodSelector 
+                name={"distance"}
+                value1={"manual"}
+                value2={"map"}
+                label1={"Ręcznie"}
+                label2={"Mapy"}
+                currentMethod={distanceMethod}
+                onChangeMethod={(method) => {
+                    setDistanceMethod(method);
+                    setDistance("")
+                }}
+            />
     
             {distanceMethod === "manual" ? (
                 <>
