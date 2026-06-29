@@ -1,3 +1,5 @@
+import NumericInput from "./NumericInput";
+
 function CalculatorDistance({
     distanceMethod, 
     setDistanceMethod, 
@@ -7,7 +9,6 @@ function CalculatorDistance({
     setStartAddress, 
     endAddress, 
     setEndAddress, 
-    onNumericChange
 }) {
     return (
         <section>
@@ -18,13 +19,11 @@ function CalculatorDistance({
     
             {distanceMethod === "manual" ? (
                 <>
-                    <label htmlFor="distance">Odległość [km]</label>
-                    <input 
-                        type="text" 
-                        inputMode="decimal" 
-                        id="distance" 
+                    <NumericInput 
+                        id={"distance"} 
+                        label={"Odległość [km]"} 
+                        setter={setDistance} 
                         value={distance} 
-                        onChange={(event) => onNumericChange(event.target.value, setDistance)}
                     /><br />
                 </>
             ) : distanceMethod === "map" ? (

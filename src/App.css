@@ -35,105 +35,98 @@ body {
 }
 
 .Navbar {
-  position: fixed;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  position: fixed;
   background-color: var(--teal-prim);
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-around;
+  padding: 0.4rem 0.8rem;
   gap: 0.4rem;
-  padding: 0.5rem 0.8rem;
 }
 
 .NavbarIcon {
-  background-color: var(--teal-prim);
-  flex: 1;
-  height: 3rem;
+  background-color: var(--teal-60);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0;
-  border-radius: 0.5rem;
-  padding: 0;
+  padding: 0.6rem;
+  flex-grow: 1;
+  border-radius: 0.8rem;
+  color: var(--teal-white);
+  transition: 0.1s all ease-out;
 
   -webkit-tap-highlight-color: transparent;
 }
 
-.NavbarIcon > svg {
-  width: 100%;
-  height: 2rem;
-  padding: 0.5rem;
-  color: var(--teal-white);
-  background-color: var(--teal-20);
-  border-radius: 0.5rem;
-  transition: 0.12s ease-in-out all;
-}
-
-.NavbarIconActive > svg,
-.NavbarIcon:active,
-.NavbarIcon:active > svg:active {
-  color: var(--gold-prim);
-  background-color: var(--gold-20);
-  transition: 0.12s ease-in-out all;
-}
-
-.Header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  background-color: var(--teal-prim);
-  color: var(--teal-white);
-}
-
-.HeaderLogo {
-  /* background-color: red; */
-}
-
-.HeaderText {
-  /* background-color: gray; */
+.NavbarIcon:active {
+  background-color: var(--gold-light);
+  color: var(--gold-black);
 }
 
 .HomeMain {
   left: 0;
   right: 0;
   height: 100dvh;
-  background-color: var(--teal-white);
+  display: flex;
+  flex-direction: column;
 }
 
+.HomeHeader {
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--teal-prim);
+  color: var(--teal-white);
+}
+
+/* .HeaderLogo {
+  background-color: red;
+}
+
+.HeaderText {
+  background-color: rebeccapurple;
+} */
+
 .HomeNav {
+  left: 0;
+  right: 0;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  padding: 2rem 0;
-  width: 100%;
-  height: max-content;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .HomeNavIcon {
-  background-color: var(--teal-85);
-  width: 90%;
-  flex: 1;
-  border-radius: 1rem;
+  background-color: var(--teal-60);
+  color: var(--teal-white);
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  color: var(--teal-white);
-  text-decoration: none;
+  gap: 0.6rem;
+  width: 80%;
+  border-radius: 1rem;
+  flex-grow: 1;
+  font-size: 1.1rem;
   font-weight: 600;
-  padding: 3rem 0;
-  transition: 0.12s ease-in-out all;
+  transition: 0.1s all ease-out;
 
   -webkit-tap-highlight-color: transparent;
 }
 
 .HomeNavIcon:active {
-  background-color: var(--gold-85);
+  background-color: var(--gold-light);
   color: var(--gold-black);
 }

@@ -27,14 +27,6 @@ function CalculatorPage() {
     const totalCost = fuelCost + otherCostsNumber;
     const costPerPerson = totalCost / numberOfPeople;
 
-    const handleNumericChange = (value, setter) => {
-        const normalizedValue = value.replace(",", ".");
-        
-        if (normalizedValue === "" || /^\d*\.?\d*$/.test(normalizedValue)) {
-            setter(normalizedValue);
-        }
-    };
-
     return (
         <>
             <h1>Kalkulator</h1>
@@ -50,7 +42,6 @@ function CalculatorPage() {
                     setStartAddress={setStartAddress}
                     endAddress={endAddress}
                     setEndAddress={setEndAddress}
-                    onNumericChange={handleNumericChange}
                 />
 
                 <p>Spalanie</p>
@@ -61,27 +52,23 @@ function CalculatorPage() {
                     setFuelConsumption={setFuelConsumption}
                     vehicle={vehicle}
                     setVehicle={setVehicle}
-                    onNumericChange={handleNumericChange}
                 />
 
                 <p>Cena paliwa</p>
                 <CalculatorFuelPrice 
                     fuelPrice={fuelPrice}
                     setFuelPrice={setFuelPrice}
-                    onNumericChange={handleNumericChange}
                 />
 
                 <p>Liczba osób</p>
                 <CalculatorNumberOfPeople 
                     numberOfPeople={numberOfPeople}
-                    setNumberOfPeople={setNumberOfPeople}
                 />
 
                 <p>Inne koszty</p>
                 <CalculatorOtherCosts 
                     otherCosts={otherCosts}
                     setOtherCosts={setOtherCosts}
-                    onNumericChange={handleNumericChange}
                 />
                         
                 {distanceMethod === "map" ? (

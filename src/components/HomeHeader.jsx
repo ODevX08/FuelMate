@@ -1,10 +1,10 @@
-function HeaderMain() {
+function HomeHeader() {
     return (
-        <header className="Header">
+        <header className="HomeHeader">
            <div className="HeaderLogo">logo</div>
             <h1 className="HeaderText">FuelMate</h1>
         </header>
     )
 }
 
-export default HeaderMain;
+export default HomeHeader;

@@ -1,9 +1,10 @@
+import NumericInput from "./NumericInput";
+
 function CalculatorFuelConsumption({
     fuelConsumptionMethod,
     setFuelConsumptionMethod,
     fuelConsumption,
     setFuelConsumption,
-    onNumericChange
 }) {
     return (
         <section>
@@ -14,13 +15,11 @@ function CalculatorFuelConsumption({
 
             {fuelConsumptionMethod === "manual" ? (
                 <>
-                    <label htmlFor="fuelConsumption">Spalanie [l/100 km]</label>
-                    <input 
-                        type="text" 
-                        inputMode="decimal" 
-                        id="fuelConsumption" 
-                        value={fuelConsumption} 
-                        onChange={(event) => onNumericChange(event.target.value, setFuelConsumption)}
+                    <NumericInput 
+                        id={"fuelConsumption"}
+                        label={"Spalanie [l/100km]"}
+                        setter={setFuelConsumption}
+                        value={fuelConsumption}
                     /><br />
                 </>
             ) : fuelConsumptionMethod === "vehicle" ? (

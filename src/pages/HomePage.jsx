@@ -1,11 +1,10 @@
-import HeaderMain from "../components/Header";
+import HomeHeader from "../components/HomeHeader";
 import HomeNav from "../components/HomeNav";
 
 function HomePage() {
     return (
         <main className="HomeMain">
-            <HeaderMain />
-
+            <HomeHeader />
             <HomeNav />
         </main>
     )
